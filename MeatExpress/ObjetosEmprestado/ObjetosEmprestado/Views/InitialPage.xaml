@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeatExpress.Views.InitialPage"
+             Title="Bem vindo ao Meat Express!">
+
+    <StackLayout Orientation="Vertical" Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+        <Button Text="ADM" Clicked="OnADM" Margin="0, 15"/>
+        <Button Text="USER" Clicked="OnUser" Margin="0, 15"/>
+        <Button Text="SAIR" Clicked="OnSair" Margin="0, 70"/>
+
+    </StackLayout>
+
+</ContentPage>

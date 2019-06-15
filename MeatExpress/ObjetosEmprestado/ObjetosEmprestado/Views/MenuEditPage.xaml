@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeatExpress.Views.MenuEditPage"
+             Title="Menu">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="baseline_add_circle_white_24.png" Clicked="OnAdicionarCarnePronta"/>
+        <!--<ToolbarItem Text="+" Clicked="OnAdicionarCarnePronta"/>-->
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical">
+
+        <SearchBar x:Name="carneSearchBar" Placeholder="Procurar por..." TextChanged="OncarneProcurado" />
+
+        <ListView x:Name="carneListView"
+                  CachingStrategy="RecycleElement"
+                  SeparatorVisibility="Default"
+                  IsPullToRefreshEnabled="True"
+                  HasUnevenRows="True"
+                  Margin="0,10,0,0"
+                  ItemSelected="OncarneSelecionado">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10" VerticalOptions="Fill">
+                            <Label Text="{Binding Descricao}" FontAttributes="Bold" FontSize="20"/>
+                            <Label Text="{Binding Nome}" FontSize="18"/>
+                            <Label Text="{Binding Preco, StringFormat='R$ {0}'}" HorizontalTextAlignment="End"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

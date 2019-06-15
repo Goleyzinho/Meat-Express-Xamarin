@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeatExpress.Views.PagamentoPage"
+             Title="Página de Pagamento">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="baseline_settings_backup_restore_24.png" Clicked="OnBack"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <Label Text="Escolha a forma de Pagamento, caso seja por crédito, insira os dados!"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontAttributes="Bold"
+               FontSize="15"
+               HorizontalTextAlignment="Center"/>
+        <Button Text="Debito" Clicked="OnDebito" Margin="0, 2"/>
+        <Button Text="Credito" Clicked="OnCredito" Margin="0, 2"/>
+        <Entry x:Name="Nome" Placeholder="Nome do Titular"/>
+        <Entry x:Name="CPF" Placeholder="CPF do Titular"/>
+        <Entry x:Name="CardCod" Placeholder="Código de segurança do Cartão"/>
+        <DatePicker x:Name="DataVal" Format="MM/yy"/>
+        <Entry x:Name="Band" Placeholder="Bandeira do Cartão"/>
+        <Entry x:Name="NumCard" Placeholder="Numero do Cartão"/>
+
+        <Label Text="Lembre-se de clicar no botão apenas com certeza de realizar o pagamento!"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" 
+               FontAttributes="Italic"
+               FontSize="13"
+               HorizontalTextAlignment="Center"/>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:MeatExpress.Views"
+             x:Class="MeatExpress.Views.MainTabbedPage"
+             Title="Meat Express">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Icon="baseline_settings_backup_restore_24.png" Clicked="OnBack"/>
+    </TabbedPage.ToolbarItems>
+    
+    <TabbedPage.Children>
+        
+        <view:PromoEditPage/>
+        <view:MenuEditPage/>
+        
+    </TabbedPage.Children>
+    
+</TabbedPage>

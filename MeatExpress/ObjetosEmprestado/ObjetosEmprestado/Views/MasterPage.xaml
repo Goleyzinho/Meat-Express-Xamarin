@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeatExpress.Views.MasterPage"
+                  xmlns:view="clr-namespace:MeatExpress.Views">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            
+            <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="Yellow">
+                <Button Text="Logout" Clicked="OnLogout" BackgroundColor="Red" TextColor="Blue"/>
+            </StackLayout>
+            
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <view:MainTabbedPage/>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeatExpress.Views.EditcarnePage"
+             Title="Detalhes">
+
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="20">
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+
+            <Label Text="Nome da Carne"/>
+            <Entry x:Name="DescricaoEntry" Placeholder="Nome da carne..."/>
+
+            <Label Text="Descrição da Carne" Margin="0,20,0,0"/>
+            <Entry x:Name="NomeEntry" Placeholder="Descrição da carne..."/>
+
+            <Label Text="Preço da Carne"/>
+            <Entry x:Name="PrecoEntry" Placeholder="Preço da carne..."/>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+            <Button x:Name="SalvarButton" Text="Salvar" HorizontalOptions="FillAndExpand" Clicked="OnSalvar"/>
+            <Button x:Name="SalvarMenuButton" Text="Salvar Menu" HorizontalOptions="FillAndExpand" Clicked="OnSalvar2"/>
+            <Button x:Name="AttButton" Text="Atualizar" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="OnAtt"/>
+            <Button x:Name="ExcluirButton" Text="Excluir" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="OnExcluir"/>
+            <Button x:Name="SepararButton" Text="Separar" HorizontalOptions="FillAndExpand" IsVisible="False" Clicked="OnSeparar"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
